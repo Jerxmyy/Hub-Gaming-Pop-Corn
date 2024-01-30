@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "batman forever pleine";
+    src: url(../fonts/batmfo__.woff);
+}
+
+@font-face {
+    font-family: "batman forever vide";
+    src: url(.././fonts/batmfa.woff);
+}
+
+
+h1 {
+    font-family: "batman forever vide";
+}
