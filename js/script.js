@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "-5%",
             end: "50%",
             scrub: 0.5,
-            markers: true,
         },
         scale: 5,
     });
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "20%",
             end: "50%",
             scrub: 0.5,
-            markers: true,
         },
         opacity: 1,
     });
