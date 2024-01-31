@@ -1,8 +1,6 @@
-/* Votre autre CSS reste inchangé */
-
 @font-face {
     font-family: "batman forever pleine";
-    src: url(../fonts/batmfa.woff);
+    src: url(../fonts/batmfo__.woff);
 }
 
 h1 {
@@ -23,6 +21,7 @@ body {
     background: url(../img/background.jpeg);
     background-size: cover;
     background-position: center;
+    background-repeat: repeat;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -71,9 +70,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 165vh;
+    width: 210vh;
+    position: fixed;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .moon img {
     transition: transform 0.5s;
+}
+
+.black-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
 }
