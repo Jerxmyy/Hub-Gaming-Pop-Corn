@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const title = document.querySelector(".title");
+    const title = document.querySelector(".font-batman");
     const moon = document.querySelector(".moon img");
     const blackOverlay = document.querySelector(".black-overlay");
 
@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: ".all",
             start: "0%",
-            end: "35%",
+            end: "200%",
             scrub: 0.5,
-            markers: true,
         },
         fontSize: "2rem",
         opacity: 0,
@@ -20,32 +19,31 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(moon, {
         scrollTrigger: {
             trigger: ".all",
-            start: "-5%",
+            start: "0%",
             end: "50%",
-            scrub: 2,
-            markers: true,
+            scrub: 0.01,
         },
         scale: 5,
+        rotate: 200,
     });
 
     gsap.to(blackOverlay, {
         scrollTrigger: {
             trigger: ".all",
-            start: "20%",
-            end: "50%",
+            start: "10%",
+            end: "70%",
             scrub: 0.5,
-            markers: true,
         },
         opacity: 1,
+        backgroundColor: "black",
     });
 
     gsap.to(blackOverlay, {
         scrollTrigger: {
             trigger: ".all",
             start: "50%",
-            end: "65%",
+            end: "100%",
             scrub: 0.5,
-            markers: true,
         },
         backgroundColor: "red",
     });
@@ -53,10 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(blackOverlay, {
         scrollTrigger: {
             trigger: ".all",
-            start: "65%",
-            end: "80%",
+            start: "100%",
+            end: "150%",
             scrub: 0.5,
-            markers: true,
         },
         backgroundColor: "blue",
     });
@@ -64,10 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(blackOverlay, {
         scrollTrigger: {
             trigger: ".all",
-            start: "80%",
-            end: "95%",
+            start: "150%",
+            end: "200%",
             scrub: 0.5,
-            markers: true,
         },
         backgroundColor: "green",
     });
@@ -75,10 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(blackOverlay, {
         scrollTrigger: {
             trigger: ".all",
-            start: "95%",
-            end: "110%",
+            start: "200%",
+            end: "250%",
             scrub: 0.5,
-            markers: true,
         },
         backgroundColor: "yellow",
     });
@@ -86,32 +81,29 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(blackOverlay, {
         scrollTrigger: {
             trigger: ".all",
-            start: "110%",
-            end: "125%",
+            start: "250%",
+            end: "300%",
             scrub: 0.5,
-            markers: true,
         },
-        backgroundColor: "purple",
+        backgroundColor: "pink",
     });
 
     gsap.to(blackOverlay, {
         scrollTrigger: {
             trigger: ".all",
-            start: "125%",
-            end: "140%",
+            start: "300%",
+            end: "350%",
             scrub: 0.5,
-            markers: true,
         },
-        backgroundColor: "pink",
+        backgroundColor: "purple",
     });
 
     gsap.to(".all", {
         scrollTrigger: {
             trigger: ".all",
             start: "100%",
-            end: "+=300%",
+            end: "+=350%",
             scrub: 0.5,
-            markers: true,
         },
     });
 });

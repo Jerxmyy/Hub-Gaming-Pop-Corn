@@ -11,6 +11,17 @@
     <title>HUB</title>
 </head>
 <style>
+    @import url("../fonts/batmfa.woff");
+
+    @font-face {
+        font-family: "batman forever pleine";
+        src: url("../fonts/batmfa.woff");
+    }
+
+    .font-batman {
+        font-family: "batman forever pleine";
+    }
+
     .mouse {
         fill: white;
     }
@@ -31,43 +42,35 @@
         }
     }
 </style>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    clifford: "#da373d",
-                },
-            },
-        },
-    };
-</script>
 
-<body style="background-image: url(./img/background.jpeg)" class="bg-cover bg-center bg-repeat-xy m-0 p-0">
-    <div class="all h-screen">
-        <h1
-            class="font-batman text-white text-9vh text-center fixed top-0 left-1/2 transform -translate-x-1/2 w-full z-1">
-            EXPLOREZ <br />
-            VOTRE CULTURE SCI-FI
-        </h1>
-        <div class="mouse absolute bottom-1/2 left-1/2 transform -translate-x-1/2 cursor-pointer animate-blink blink">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-mouse">
-                <rect x="5" y="2" width="14" height="20" rx="7" />
-                <path d="M12 6v4" />
-            </svg>
-        </div>
-        <div
-            class="moon flex items-center justify-center h-165vh w-210vh fixed top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform">
-            <div class="img_moon">
-                <img src="img/moon.png" alt="Moon" class="transition-transform duration-500" />
+<body style="height: 600vh;">
+    <div style="background-image: url(./img/background.jpeg); background-repeat: repeat;"
+        class=" bg-cover bg-center bg-repeat-xy m-0 p-0">
+        <div class="all h-screen">
+            <h1
+                class="font-batman text-white text-5xl text-center fixed top-0 left-1/2 transform -translate-x-1/2 w-full z-1">
+                EXPLOREZ <br />
+                VOTRE CULTURE SCI-FI
+            </h1>
+            <div
+                class="mouse absolute bottom-1/2 left-1/2 transform -translate-x-1/2 cursor-pointer animate-blink blink">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-mouse">
+                    <rect x="5" y="2" width="14" height="20" rx="7" />
+                    <path d="M12 6v4" />
+                </svg>
             </div>
-        </div>
-        <div class="black-overlay w-full h-full bg-black opacity-0 fixed pointer-events-none z-2">
-            <!-- ... Votre contenu d'overlay ici ... -->
+            <div
+                class="moon flex items-center justify-center h-165vh w-210vh fixed top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform">
+                <div class="img_moon">
+                    <img src="img/moon.png" alt="Moon" class="transition-transform duration-500" />
+                </div>
+            </div>
+            <div class="black-overlay w-full h-full bg-black opacity-0 fixed pointer-events-none z-2"></div>
         </div>
     </div>
+
 </body>
 
 </html>
