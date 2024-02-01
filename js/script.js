@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const title = document.querySelector(".title");
     const moon = document.querySelector(".moon img");
     const blackOverlay = document.querySelector(".black-overlay");
@@ -12,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "0%",
             end: "35%",
             scrub: 0.5,
+            markers: true,
         },
         fontSize: "2rem",
         opacity: 0,
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "-5%",
             end: "50%",
             scrub: 2,
+            markers: true,
         },
         scale: 5,
     });
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "20%",
             end: "50%",
             scrub: 0.5,
+            markers: true,
         },
         opacity: 1,
     });
@@ -43,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "50%",
             end: "65%",
             scrub: 0.5,
+            markers: true,
         },
         backgroundColor: "red",
     });
@@ -53,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "65%",
             end: "80%",
             scrub: 0.5,
+            markers: true,
         },
         backgroundColor: "blue",
     });
@@ -63,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "80%",
             end: "95%",
             scrub: 0.5,
+            markers: true,
         },
         backgroundColor: "green",
     });
@@ -73,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "95%",
             end: "110%",
             scrub: 0.5,
+            markers: true,
         },
         backgroundColor: "yellow",
     });
@@ -83,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "110%",
             end: "125%",
             scrub: 0.5,
+            markers: true,
         },
         backgroundColor: "purple",
     });
@@ -93,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
             start: "125%",
             end: "140%",
             scrub: 0.5,
+            markers: true,
         },
         backgroundColor: "pink",
     });
@@ -100,12 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(".all", {
         scrollTrigger: {
             trigger: ".all",
-            start: "bottom bottom",
-            end: "+=200%",
+            start: "100%",
+            end: "+=300%",
             scrub: 0.5,
             markers: true,
         },
-        height: "300vh",
     });
-
 });
