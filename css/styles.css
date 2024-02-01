@@ -52,18 +52,13 @@ body {
 
 .lucide-mouse {
     width: 24px;
-    /* Ajustez la largeur selon vos besoins */
     height: 24px;
-    /* Ajustez la hauteur selon vos besoins */
     fill: #fff;
-    /* Couleur de l'icône de souris */
 }
 
 .all {
     margin-top: 10vh;
-    /* Ajustez selon la hauteur de votre titre pour éviter qu'il soit coupé par le haut de la page */
     height: 200vh;
-    /* Ajustez la hauteur en fonction de votre contenu */
 }
 
 .moon {
