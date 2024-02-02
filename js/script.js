@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(blackOverlay, {
         scrollTrigger: {
             trigger: ".all",
-            start: "10%",
+            start: "0%",
             end: "70%",
             scrub: 0.5,
         },
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: ".all",
             start: "100%",
-            end: "+=350%",
+            end: "350%",
             scrub: 0.5,
         },
     });
