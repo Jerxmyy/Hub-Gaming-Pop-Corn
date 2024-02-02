@@ -5,31 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="libs/gsap-latest-beta.min.js" defer></script>
+    <script src="libs/ScrollTrigger.min.js" defer></script>
+    <script src="libs/ScrollSmoother.min.js" defer></script>
+    <script src="libs/SplitText.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
     <title>HUB</title>
 </head>
-<style>
-    @import url("../fonts/batmfa.woff");
 
-    @font-face {
-        font-family: "batman forever pleine";
-        src: url("../fonts/batmfa.woff");
-    }
-
-    .font-batman {
-        font-family: "batman forever pleine";
-    }
-
-    body {
-        background: black;
-    }
-</style>
-
-<body style="height: 600vh;">
-    <div style="background-image: url(./img/background.jpeg);background-size: cover ;background-repeat: repeat;"
-        class=" bg-cover bg-center bg-repeat-xy m-0 p-0">
+<body style="height: 600vh">
+    <div style="
+        background-image: url(./img/background.jpeg);
+        background-size: cover;
+        background-repeat: repeat;
+      " class="bg-cover bg-center bg-repeat-xy m-0 p-0">
         <div class="all h-screen">
             <h1
                 class="font-batman text-white text-5xl text-center fixed top-0 left-1/2 transform -translate-x-1/2 w-full z-1">
@@ -52,10 +42,51 @@
                 </div>
             </div>
             <div class="black-overlay w-full h-full bg-black opacity-0 fixed pointer-events-none z-2"></div>
-            <!-- ajout carroussel avec cover logo  -->
         </div>
     </div>
+    <div id="wrapper">
+        <div id="content">
+            <section class="title container flow--lg">
+                <h1><span class="eyebrow" aria-hidden="true"></span>GSAP TEST</h1>
+            </section>
 
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <div class="gallery-box">
+                        <img src="img/2.jpg" alt="1" />
+                    </div>
+                    <div class="gallery-box">
+                        <img src="img/2.jpg" alt="2" />
+                    </div>
+                    <div class="gallery-box">
+                        <img src="img/2.jpg" alt="3" />
+                    </div>
+                    <div class="gallery-box">
+                        <img src="img/2.jpg" alt="4" />
+                    </div>
+                    <div class="gallery-box">
+                        <img src="img/2.jpg" alt="5" />
+                    </div>
+                    <div class="gallery-box">
+                        <img src="img/2.jpg" alt="6" />
+                    </div>
+                </div>
+            </div>
+
+            <section class="staggered container">
+                <div class="staggered_text">
+                    <div class="flow content">
+                        <h2>RYAHE1</h2>
+                        <p>Did by me !!!</p>
+                    </div>
+                </div>
+
+                <div class="staggered_demo">
+                    <h3 id="split-stagger">lorem ipsum</h3>
+                </div>
+            </section>
+        </div>
+    </div>
 </body>
 
 </html>
