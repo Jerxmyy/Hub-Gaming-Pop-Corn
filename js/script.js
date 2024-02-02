@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: ".all",
             start: "0%",
-            end: "50%",
+            end: "40%",
             scrub: 0.01,
         },
         scale: 5,
