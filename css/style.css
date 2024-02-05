@@ -9,7 +9,9 @@
 
 body {
   background-color: #000;
-  background-image: url(./img/background.jpeg);
+  background-image: url(../img/background.jpeg);
+  background-size: contain;
+  background-repeat: repeat;
   overflow-x: hidden;
 }
 
