@@ -1,6 +1,6 @@
 @font-face {
   font-family: "batman forever pleine";
-  src: url("../fts/batmfa.woff");
+  src: url("../fonts/batmfa.woff");
 }
 
 .font-batman {
@@ -27,6 +27,25 @@ body {
   min-height: 600px;
   height: 600px;
   margin: 4rem 7rem 2rem 7rem;
+  z-index: 9999;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+  /* Assurez-vous que le fond noir a un z-index inférieur à celui du carousel */
+}
+
+body.black-bg #overlay {
+  opacity: 1;
 }
 
 .title-slide {
@@ -48,15 +67,19 @@ body {
 
 .first_title {
   text-align: center;
-  padding: 2rem 0;
+  padding: 0.5rem 0;
 }
 
 .main-title {
   color: white;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
-body.black-bg {
-  background-color: black;
-  transition: background-color 0.5s ease;
+.main-title-h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+.div-vide {
+  margin-left: 10vh;
 }

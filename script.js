@@ -9,6 +9,16 @@ const timelineHeader = gsap.timeline({
   },
 });
 
+const fadeOutTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#header-zoom",
+    scrub: 0.5,
+    start: "top top",
+    end: "+=100% 50px",
+    pin: true,
+  },
+});
+
 timelineHeader
   .to(
     ".image-2",
@@ -35,7 +45,14 @@ timelineHeader
   )
   .call(() => document.body.classList.add("black-bg"));
 
-
+fadeOutTimeline.to(
+  "#overlay",
+  {
+    opacity: 1,
+    duration: 1, // ajustez la durée en fonction de votre préférence
+  },
+  "sameTime"
+);
 
 let container = document.querySelector(".universe");
 let scrollbar = document.querySelector(".scrollbar");
