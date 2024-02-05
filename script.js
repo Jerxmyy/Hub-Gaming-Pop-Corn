@@ -11,13 +11,6 @@ const timelineHeader = gsap.timeline({
 
 timelineHeader
   .to(
-    ".image-1",
-    {
-      scale: 1.5,
-    },
-    "sameTime"
-  )
-  .to(
     ".image-2",
     {
       scale: 3,
@@ -28,20 +21,21 @@ timelineHeader
     "#header-zoom",
     {
       opacity: 0,
-      duration: 0.1, // Durée du fade out en secondes
+      duration: 0.1,
     },
-    "-=0.1" // Ajustez la temporisation si nécessaire
+    "-=0.1"
   )
   .to(
     "#slider",
     {
       opacity: 1,
-      duration: 0.1, // Durée du fade in en secondes
+      duration: 0.1,
     },
-    "-=0.1" // Ajustez la temporisation si nécessaire
-  );
+    "-=0.1"
+  )
+  .call(() => document.body.classList.add("black-bg"));
 
-// ... (le reste de votre code)
+
 
 let container = document.querySelector(".universe");
 let scrollbar = document.querySelector(".scrollbar");
