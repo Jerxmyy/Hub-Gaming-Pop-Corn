@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       scrub: 5,
     },
     scale: 5,
-    duration: 0.5,
   });
 
   //   smoother.effects(moon, { scale: 5, lag: 0.1 });

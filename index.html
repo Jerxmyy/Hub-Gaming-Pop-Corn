@@ -1,316 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>HUB</title>
-  </head>
 
-  <body style="height: 600vh">
-    <div
-      style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>HUB</title>
+</head>
+
+<body style="height: 600vh">
+  <div style="
         background-image: url(./img/background.jpeg);
         background-size: cover;
         background-repeat: repeat;
-      "
-      class="bg-cover bg-center bg-repeat-xy m-0 p-0"
-    >
-      <div class="all h-screen">
-        <h1
-          class="font-batman text-white text-7xl text-center fixed mt-40 top-0 left-1/2 transform -translate-x-1/2 w-full z-1"
-        >
-          EXPLOREZ <br />
-          VOTRE CULTURE SCI-FI
-        </h1>
-        <div
-          class="scroll absolute bottom-1/2 left-1/2 transform -translate-x-1/2 cursor-pointer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="80"
-            height="80"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="0.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="scroll lucide-chevrons-down"
-          >
-            <path d="m7 6 5 5 5-5" />
-            <path d="m7 13 5 5 5-5" />
-          </svg>
-        </div>
-        <p class="text-center fixed mt-80 left-1/2 transform -translate-x-1/2">
-          Scroll to explore
-        </p>
-        <div
-          class="moon flex items-center justify-center h-300vh w-300vh fixed top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform"
-        >
-          <div class="img_moon">
-            <img
-              src="img/moon.png"
-              alt="Moon"
-              class="transition-transform duration-500"
-            />
-          </div>
-        </div>
-        <div
-          class="black-overlay w-full h-full bg-black opacity-0 fixed pointer-events-none z-2"
-        ></div>
+      " class="bg-cover bg-center bg-repeat-xy m-0 p-0">
+    <div class="all h-screen">
+      <h1
+        class="font-batman text-white text-7xl text-center fixed mt-40 top-0 left-1/2 transform -translate-x-1/2 w-full z-1">
+        EXPLOREZ <br />
+        VOTRE CULTURE SCI-FI
+      </h1>
+      <div class="scroll absolute bottom-1/2 left-1/2 transform -translate-x-1/2 cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"
+          class="scroll lucide-chevrons-down">
+          <path d="m7 6 5 5 5-5" />
+          <path d="m7 13 5 5 5-5" />
+        </svg>
       </div>
-    </div>
-    <div id="wrapper">
-      <div id="content">
-        <section class="title container flow--lg">
-          <h1><span class="eyebrow" aria-hidden="true"></span>GSAP TEST</h1>
-        </section>
-
-        <!-- <div class="gallery-wrapper">
-          <div class="gallery">
-            <div class="gallery-box">
-              <img src="img/2.jpg" alt="1" />
-            </div>
-            <div class="gallery-box">
-              <img src="img/2.jpg" alt="2" />
-            </div>
-            <div class="gallery-box">
-              <img src="img/2.jpg" alt="3" />
-            </div>
-            <div class="gallery-box">
-              <img src="img/2.jpg" alt="4" />
-            </div>
-            <div class="gallery-box">
-              <img src="img/2.jpg" alt="5" />
-            </div>
-            <div class="gallery-box">
-              <img src="img/2.jpg" alt="6" />
-            </div>
-          </div>
-        </div> -->
-
-        <div class="flex flex-nowrap universe">
-          <h1>Choisis ton univers et relève le défi !</h1>
-          <div
-            class="flex justify-start items-center justify-items-center bg-transparent games"
-          >
-            <a href="https://www.popcorn66.fr" class="relative group">
-              <img
-                src="img/2.jpg"
-                alt="Fond Jeu"
-                class="w-full h-auto block default-image"
-              />
-              <div
-                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link"
-              >
-                <img
-                  src="img/logo-jeu-1.png"
-                  alt="logo jeu"
-                  class="h-auto w-75 mb-2 logo-jeu"
-                />
-                <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
-                  37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
-                  retrouver !
-                </p>
-
-                <button
-                  class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs"
-                >
-                  JOUER
-                </button>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="flex justify-start items-center justify-items-center bg-transparent games"
-          >
-            <a href="https://www.popcorn66.fr" class="relative group">
-              <img
-                src="img/3.jpg"
-                alt="Fond Jeu"
-                class="w-full h-auto block default-image"
-              />
-              <div
-                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link"
-              >
-                <img
-                  src="img/logo-jeu-1.png"
-                  alt="logo jeu"
-                  class="h-auto w-75 mb-2 logo-jeu"
-                />
-                <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
-                  37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
-                  retrouver !
-                </p>
-
-                <button
-                  class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs"
-                >
-                  JOUER
-                </button>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="flex justify-start items-center justify-items-center bg-transparent games"
-          >
-            <a href="https://www.popcorn66.fr" class="relative group">
-              <img
-                src="img/2.jpg"
-                alt="Fond Jeu"
-                class="w-full h-auto block default-image"
-              />
-              <div
-                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link"
-              >
-                <img
-                  src="img/logo-jeu-1.png"
-                  alt="logo jeu"
-                  class="h-auto w-75 mb-2 logo-jeu"
-                />
-                <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
-                  37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
-                  retrouver !
-                </p>
-
-                <button
-                  class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs"
-                >
-                  JOUER
-                </button>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="flex justify-start items-center justify-items-center bg-transparent games"
-          >
-            <a href="https://www.popcorn66.fr" class="relative group">
-              <img
-                src="img/3.jpg"
-                alt="Fond Jeu"
-                class="w-full h-auto block default-image"
-              />
-              <div
-                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link"
-              >
-                <img
-                  src="img/logo-jeu-1.png"
-                  alt="logo jeu"
-                  class="h-auto w-75 mb-2 logo-jeu"
-                />
-                <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
-                  37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
-                  retrouver !
-                </p>
-
-                <button
-                  class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs"
-                >
-                  JOUER
-                </button>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="flex justify-start items-center justify-items-center bg-transparent games"
-          >
-            <a href="https://www.popcorn66.fr" class="relative group">
-              <img
-                src="img/2.jpg"
-                alt="Fond Jeu"
-                class="w-full h-auto block default-image"
-              />
-              <div
-                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link"
-              >
-                <img
-                  src="img/logo-jeu-1.png"
-                  alt="logo jeu"
-                  class="h-auto w-75 mb-2 logo-jeu"
-                />
-                <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
-                  37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
-                  retrouver !
-                </p>
-
-                <button
-                  class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs"
-                >
-                  JOUER
-                </button>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="flex justify-start items-center justify-items-center bg-transparent games"
-          >
-            <a href="https://www.popcorn66.fr" class="relative group">
-              <img
-                src="img/3.jpg"
-                alt="Fond Jeu"
-                class="w-full h-auto block default-image"
-              />
-              <div
-                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link"
-              >
-                <img
-                  src="img/logo-jeu-1.png"
-                  alt="logo jeu"
-                  class="h-auto w-75 mb-2 logo-jeu"
-                />
-                <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
-                  37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
-                  retrouver !
-                </p>
-
-                <button
-                  class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs"
-                >
-                  JOUER
-                </button>
-              </div>
-            </a>
-          </div>
+      <p class="text-center fixed mt-80 left-1/2 transform -translate-x-1/2">
+        Scroll to explore
+      </p>
+      <div
+        class="moon flex items-center justify-center h-300vh w-300vh fixed top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform">
+        <div class="img_moon">
+          <img src="img/moon.png" alt="Moon" class="transition-transform duration-500" />
         </div>
-
-        <!-- Scrollbar -->
-        <div
-          class="fixed h-px bg-gray-800 bottom-20 left-1/2 transform -translate-x-1/2 w-0 transition-width duration-300 ease-in-out scrollbar"
-        >
-          <div
-            class="absolute h-0.5 w-20 rounded-sm bg-white top-1/2 transform -translate-y-1/2 h-0.5 transition-transform duration-300 ease-in-out cursor"
-          ></div>
-        </div>
-
-        <section class="staggered container">
-          <div class="staggered_text">
-            <div class="flow content">
-              <h2>RYAHE1</h2>
-              <p>Did by me !!!</p>
-            </div>
-          </div>
-
-          <div class="staggered_demo">
-            <h3 id="split-stagger">lorem ipsum</h3>
-          </div>
-        </section>
       </div>
+      <div class="black-overlay w-full h-full bg-black opacity-0 fixed pointer-events-none z-2"></div>
     </div>
+  </div>
+  <div id="wrapper">
+    <div id="content">
+      <section class="title container flow--lg">
+        <h1><span class="eyebrow" aria-hidden="true"></span>GSAP TEST</h1>
+      </section>
 
-    <script src="libs/gsap-latest-beta.min.js" defer></script>
-    <script src="libs/ScrollTrigger.min.js" defer></script>
-    <script src="libs/ScrollSmoother.min.js" defer></script>
-    <script src="libs/SplitText.min.js" defer></script>
-    <script src="script.js" defer></script>
-  </body>
+      <div class="flex flex-nowrap universe">
+        <h1>Choisis ton univers et relève le défi !</h1>
+        <div class="flex justify-start items-center justify-items-center bg-transparent games">
+          <a href="https://www.popcorn66.fr" class="relative group">
+            <img src="img/2.jpg" alt="Fond Jeu" class="w-full h-auto block default-image" />
+            <div
+              class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link">
+              <img src="img/logo-jeu-1.png" alt="logo jeu" class="h-auto w-75 mb-2 logo-jeu" />
+              <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
+                37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
+                retrouver !
+              </p>
+
+              <button class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs">
+                JOUER
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="flex justify-start items-center justify-items-center bg-transparent games">
+          <a href="https://www.popcorn66.fr" class="relative group">
+            <img src="img/2.jpg" alt="Fond Jeu" class="w-full h-auto block default-image" />
+            <div
+              class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link">
+              <img src="img/logo-jeu-1.png" alt="logo jeu" class="h-auto w-75 mb-2 logo-jeu" />
+              <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
+                37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
+                retrouver !
+              </p>
+
+              <button class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs">
+                JOUER
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="flex justify-start items-center justify-items-center bg-transparent games">
+          <a href="https://www.popcorn66.fr" class="relative group">
+            <img src="img/2.jpg" alt="Fond Jeu" class="w-full h-auto block default-image" />
+            <div
+              class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link">
+              <img src="img/logo-jeu-1.png" alt="logo jeu" class="h-auto w-75 mb-2 logo-jeu" />
+              <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
+                37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
+                retrouver !
+              </p>
+
+              <button class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs">
+                JOUER
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="flex justify-start items-center justify-items-center bg-transparent games">
+          <a href="https://www.popcorn66.fr" class="relative group">
+            <img src="img/2.jpg" alt="Fond Jeu" class="w-full h-auto block default-image" />
+            <div
+              class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link">
+              <img src="img/logo-jeu-1.png" alt="logo jeu" class="h-auto w-75 mb-2 logo-jeu" />
+              <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
+                37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
+                retrouver !
+              </p>
+
+              <button class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs">
+                JOUER
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="flex justify-start items-center justify-items-center bg-transparent games">
+          <a href="https://www.popcorn66.fr" class="relative group">
+            <img src="img/2.jpg" alt="Fond Jeu" class="w-full h-auto block default-image" />
+            <div
+              class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link">
+              <img src="img/logo-jeu-1.png" alt="logo jeu" class="h-auto w-75 mb-2 logo-jeu" />
+              <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
+                37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
+                retrouver !
+              </p>
+
+              <button class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs">
+                JOUER
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="flex justify-start items-center justify-items-center bg-transparent games">
+          <a href="https://www.popcorn66.fr" class="relative group">
+            <img src="img/2.jpg" alt="Fond Jeu" class="w-full h-auto block default-image" />
+            <div
+              class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 bg-black bg-opacity-70 transition-opacity group-hover:opacity-100 link">
+              <img src="img/logo-jeu-1.png" alt="logo jeu" class="h-auto w-75 mb-2 logo-jeu" />
+              <p class="mt-4 mb-5 w-80 text-center mb-4 text-jeu">
+                37 films, Séries et Jeux Vidéos liés à la Science-Fiction à
+                retrouver !
+              </p>
+
+              <button class="font-semibold bg-white text-black px-5 py-2 rounded-3xl text-xs">
+                JOUER
+              </button>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Scrollbar -->
+      <div
+        class="fixed h-px bg-gray-800 bottom-20 left-1/2 transform -translate-x-1/2 w-0 transition-width duration-300 ease-in-out scrollbar">
+        <div
+          class="absolute h-0.5 w-20 rounded-sm bg-white top-1/2 transform -translate-y-1/2 h-0.5 transition-transform duration-300 ease-in-out cursor">
+        </div>
+      </div>
+
+      <section class="staggered container">
+        <div class="staggered_text">
+          <div class="flow content">
+            <h2>RYAHE1</h2>
+            <p>Did by us !!!</p>
+          </div>
+        </div>
+
+        <div class="staggered_demo">
+          <h3 id="split-stagger">lorem ipsum</h3>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="libs/gsap-latest-beta.min.js" defer></script>
+  <script src="libs/ScrollTrigger.min.js" defer></script>
+  <script src="libs/ScrollSmoother.min.js" defer></script>
+  <script src="libs/SplitText.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+
 </html>
