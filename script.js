@@ -1,112 +1,47 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const title = document.querySelector(".font-batman");
-  const moon = document.querySelector(".moon img");
-  const blackOverlay = document.querySelector(".black-overlay");
-  const galleryWrapper = document.querySelector(".gallery-wrapper");
-  const gallery = document.querySelector(".gallery");
-
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
-
-  const smoother = ScrollSmoother.create({
-    wrapper: "#wrapper",
-    content: "#content",
-    smooth: 1,
-    normalizeScroll: true,
-    ignoreMobileResize: true,
-    effects: true,
-    preventDefault: true,
-  });
-
-  gsap.to(title, {
-    scrollTrigger: {
-      trigger: "body",
-      start: "0%",
-      end: "150%",
-      scrub: 0.5,
-    },
-    fontSize: "0rem",
-    opacity: 0,
-  });
-
-  gsap.to(moon, {
-    scrollTrigger: {
-      trigger: "body",
-      start: "0%",
-      end: "50%",
-      scrub: 5,
-    },
-    scale: 5,
-  });
-
-  //   smoother.effects(moon, { scale: 5, lag: 0.1 });
-
-  gsap.to(blackOverlay, {
-    scrollTrigger: {
-      trigger: "body",
-      start: "30%",
-      end: "50%",
-      scrub: 0.5,
-      onComplete: function () {
-        // Fade in the gallery
-        gsap.to(".gallery", {
-          opacity: 1,
-          duration: 1,
-          ease: "power2.inOut",
-          delay: 0.5,
-        });
-
-        // Start the gallery animation after the black overlay animation completes
-        tlGallery.play();
-      },
-    },
-    opacity: 1,
-    backgroundColor: "black",
-  });
-
-  gsap.to(".all", {
-    scrollTrigger: {
-      trigger: ".all",
-      start: "100%",
-      end: "+=400%",
-      scrub: 0.5,
-    },
-  });
-
-  gsap.to("#content", {
-    scrollTrigger: {
-      trigger: "body",
-      start: "30%",
-      end: "100%",
-      scrub: true,
-      markers: true,
-    },
-    opacity: 1,
-  });
-
-  let tlGallery = gsap.timeline({ paused: true });
-  tlGallery.to(gallery, {
-    x: `-${gallery.offsetWidth + window.innerWidth}`,
-    scrollTrigger: {
-      trigger: galleryWrapper,
-      start: "top top",
-      end: `+=${gallery.offsetWidth + window.innerWidth}`,
-      pin: true,
-      scrub: 0.5,
-    },
-  });
-
-  let tl = gsap.timeline();
-  let mySplitText = new SplitText("#split-stagger", { type: "words,chars" });
-  let chars = mySplitText.chars;
-
-  chars.forEach((char, i) => {
-    smoother.effects(char, { speed: 1, lag: (i + 1) * 0.1 });
-  });
+const timelineHeader = gsap.timeline({
+  scrollTrigger: {
+    id: "ZOOM",
+    trigger: "#header-zoom",
+    scrub: 0.5,
+    start: "top top",
+    end: "+=100% 50px",
+    pin: true,
+  },
 });
 
-// SLIDER SCROLL
+timelineHeader
+  .to(
+    ".image-1",
+    {
+      scale: 1.5,
+    },
+    "sameTime"
+  )
+  .to(
+    ".image-2",
+    {
+      scale: 3,
+    },
+    "sameTime"
+  )
+  .to(
+    "#header-zoom",
+    {
+      opacity: 0,
+      duration: 0.1, // Durée du fade out en secondes
+    },
+    "-=0.1" // Ajustez la temporisation si nécessaire
+  )
+  .to(
+    "#slider",
+    {
+      opacity: 1,
+      duration: 0.1, // Durée du fade in en secondes
+    },
+    "-=0.1" // Ajustez la temporisation si nécessaire
+  );
 
-gsap.registerPlugin(ScrollTrigger);
+// ... (le reste de votre code)
 
 let container = document.querySelector(".universe");
 let scrollbar = document.querySelector(".scrollbar");
