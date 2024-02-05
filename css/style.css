@@ -1,5 +1,8 @@
 body {
-  background-color: #000;
+  /* background-color: #000; */
+  background-image: url(../img/background.jpeg);
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 section {
