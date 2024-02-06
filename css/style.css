@@ -1,33 +1,38 @@
 @font-face {
-  font-family: "batman forever pleine";
+  font-family: "Batman Forever";
   src: url("../fonts/batmfa.woff");
 }
 
 .font-batman {
-  font-family: "batman forever pleine";
+  font-family: "Batman Forever";
 }
 
-body {
-  background-color: #000;
-  background-image: url(../img/background.jpeg);
-  background-size: contain;
-  background-repeat: repeat;
-  overflow-x: hidden;
+p {
+  font-family: "Saira";
 }
 
-#header-zoom {
+.scroll-text {
+  font-size: 22px;
+}
+
+.fixed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fixed-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#moon-zoom {
   justify-content: center;
   display: flex;
-}
-
-
-.games {
-  min-width: 1120px;
-  width: 1120px;
-  min-height: 600px;
-  height: 600px;
-  margin: 4rem 7rem 2rem 7rem;
-  z-index: 9999;
 }
 
 #overlay {
@@ -38,10 +43,9 @@ body {
   height: 100%;
   background: #000;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.1s ease;
   pointer-events: none;
   z-index: 0;
-  /* Assurez-vous que le fond noir a un z-index inférieur à celui du carousel */
 }
 
 body.black-bg #overlay {
@@ -67,10 +71,11 @@ body.black-bg #overlay {
 
 .first_title {
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 2rem 0;
 }
 
 .main-title {
+  margin-bottom: -20px;
   color: white;
   font-size: 4rem;
 }
@@ -82,4 +87,32 @@ body.black-bg #overlay {
 
 .div-vide {
   margin-left: 10vh;
+}
+
+.universe {
+  font-family: "Saira";
+}
+
+.scrollbar {
+  opacity: 0;
+}
+
+.scroll-text {
+  color: white;
+}
+
+.first_title svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* slider css */
+
+.games {
+  min-width: 1120px;
+  width: 1120px;
+  min-height: 600px;
+  height: 600px;
+  margin: 4rem 7rem 2rem 7rem;
+  z-index: 9999;
 }

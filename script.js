@@ -1,7 +1,7 @@
 const timelineHeader = gsap.timeline({
   scrollTrigger: {
     id: "ZOOM",
-    trigger: "#header-zoom",
+    trigger: ".first_title",
     scrub: 0.5,
     start: "top top",
     end: "+=100% 50px",
@@ -11,30 +11,40 @@ const timelineHeader = gsap.timeline({
 
 const fadeOutTimeline = gsap.timeline({
   scrollTrigger: {
-    trigger: "#header-zoom",
+    trigger: "#moon-zoom",
     scrub: 0.5,
     start: "top top",
     end: "+=100% 50px",
-    pin: true,
   },
 });
 
 timelineHeader
   .to(
-    ".image-2",
+    ".moon",
     {
       scale: 3,
     },
     "sameTime"
   )
+
   .to(
-    "#header-zoom",
+    ".fixed-background",
     {
       opacity: 0,
       duration: 0.1,
     },
     "-=0.1"
   )
+
+  .to(
+    "#moon-zoom",
+    {
+      opacity: 0,
+      duration: 0.1,
+    },
+    "-=0.1"
+  )
+
   .to(
     "#slider",
     {
@@ -49,10 +59,12 @@ fadeOutTimeline.to(
   "#overlay",
   {
     opacity: 1,
-    duration: 1, // ajustez la durée en fonction de votre préférence
+    duration: 1,
   },
   "sameTime"
 );
+
+// SLIDER
 
 let container = document.querySelector(".universe");
 let scrollbar = document.querySelector(".scrollbar");
@@ -93,5 +105,20 @@ hscroll.from(".universe", { x: 300 }).to(
   },
   0
 );
+
+// scrollbar appears on scroll
+let opacityTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".universe",
+    start: "top 50%",
+    end: "bottom top",
+    toggleActions: "play none none reverse",
+  },
+});
+
+opacityTimeline.to(".scrollbar", {
+  opacity: 1,
+  duration: 0.5,
+});
 
 updateScrollTrigger();
