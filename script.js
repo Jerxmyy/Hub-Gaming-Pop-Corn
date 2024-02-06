@@ -1,7 +1,7 @@
 const timelineHeader = gsap.timeline({
   scrollTrigger: {
     id: "ZOOM",
-    trigger: ".first_title",
+    trigger: ".first-title",
     scrub: 0.5,
     start: "top top",
     end: "+=100% 50px",
@@ -20,7 +20,7 @@ const fadeOutTimeline = gsap.timeline({
 
 timelineHeader
   .to(
-    ".moon",
+    "#moon-zoom",
     {
       scale: 3,
     },
@@ -60,6 +60,24 @@ fadeOutTimeline.to(
   {
     opacity: 1,
     duration: 1,
+  },
+  "sameTime"
+);
+
+const fadeOutElements = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#moon-zoom",
+    scrub: 0.5,
+    start: "top top",
+    end: "+=100% 50px",
+  },
+});
+
+fadeOutElements.to(
+  ".main-title, .main-title-h2, .scroll-text, .lucide-chevrons-down, .logo-esd",
+  {
+    opacity: 0, // fade out des éléments
+    duration: 0.5,
   },
   "sameTime"
 );
@@ -106,7 +124,7 @@ hscroll.from(".universe", { x: 300 }).to(
   0
 );
 
-// scrollbar appears on scroll
+// Scrollbar appears on scroll
 let opacityTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".universe",

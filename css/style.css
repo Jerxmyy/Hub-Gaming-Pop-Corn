@@ -3,6 +3,27 @@
   src: url("../fonts/batmfa.woff");
 }
 
+.big-title {
+  margin: 90px;
+}
+
+.logo-esd-container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.logo-esd-container img {
+  width: 90%;
+  height: auto;
+}
+
+#moon-zoom {
+  top: 90%;
+}
+
 .font-batman {
   font-family: "Batman Forever";
 }
@@ -12,7 +33,9 @@ p {
 }
 
 .scroll-text {
-  font-size: 22px;
+  margin-top: 50px;
+  color: white;
+  font-size: 19px;
 }
 
 .fixed-background {
@@ -53,11 +76,11 @@ body.black-bg #overlay {
 }
 
 .title-slide {
-  min-width: 1120px;
-  width: 1120px;
-  min-height: 600px;
-  height: 600px;
-  margin: 4rem 7rem 2rem 7rem;
+  min-width: 80vw;
+  width: 80vw;
+  min-height: 40vh;
+  height: 40vh;
+  margin: 4rem 5%;
 }
 
 .title_games {
@@ -69,7 +92,7 @@ body.black-bg #overlay {
   color: white;
 }
 
-.first_title {
+.first-title {
   text-align: center;
   padding: 2rem 0;
 }
@@ -77,16 +100,16 @@ body.black-bg #overlay {
 .main-title {
   margin-bottom: -20px;
   color: white;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .main-title-h2 {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .div-vide {
-  margin-left: 10vh;
+  margin-left: 5%;
 }
 
 .universe {
@@ -97,11 +120,7 @@ body.black-bg #overlay {
   opacity: 0;
 }
 
-.scroll-text {
-  color: white;
-}
-
-.first_title svg {
+.first-title svg {
   display: block;
   margin: 0 auto;
 }
@@ -115,4 +134,8 @@ body.black-bg #overlay {
   height: 600px;
   margin: 4rem 7rem 2rem 7rem;
   z-index: 9999;
+}
+
+body {
+  overflow-x: hidden;
 }
